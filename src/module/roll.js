@@ -1,5 +1,5 @@
 export class STARoll {
-  async performAttributeTest(dicePool, usingFocus, usingDetermination,
+  async performAttributeTest(dicePool, usingFocus, usingDedicatedFocus, usingDetermination,
     selectedAttribute, selectedAttributeValue, selectedDiscipline,
     selectedDisciplineValue, complicationRange, speaker) {
     // Define some variables that we will be using later.
@@ -12,7 +12,8 @@ export class STARoll {
     const checkTarget = 
       parseInt(selectedAttributeValue) + parseInt(selectedDisciplineValue);
     const complicationMinimumValue = 20 - (complicationRange - 1);
-
+    const doubledetermination = parseInt(selectedDisciplineValue) + parseInt(selectedDisciplineValue)
+	
     // Foundry will soon make rolling async only, setting it up as such now avoids a warning. 
     const r = await new Roll( dicePool + 'd20' ).evaluate( {async: true});
     
@@ -21,6 +22,9 @@ export class STARoll {
       result = r.terms[0].results[i].result;
       // If the result is less than or equal to the focus, that counts as 2 successes and we want to show the dice as green.
       if ((usingFocus && result <= selectedDisciplineValue) || result == 1) {
+        diceString += '<li class="roll die d20 max">' + result + '</li>';
+        success += 2;
+      } else if ((usingDedicatedFocus && result <= doubledetermination) || result == 1) {
         diceString += '<li class="roll die d20 max">' + result + '</li>';
         success += 2;
         // If the result is less than or equal to the target (the discipline and attribute added together), that counts as 1 success but we want to show the dice as normal.
@@ -321,6 +325,63 @@ export class STARoll {
     //   this.genericItemTemplate(item.img, item.name, item.system.description, variable, tags)
     //     .then((html)=>this.sendToChat(speaker, html, damageRoll, item.name, 'sounds/dice.wav'));
     // }
+  }
+
+  async performWeaponRoll2e(item, speaker) {
+    // Create variable div and populate it with localisation to use in the HTML.
+    const variablePrompt = game.i18n.format('sta.roll.weapon.damage2e');
+    const variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', item.system.damage)+`</div>`;
+	
+	let tags = '';
+    if (item.system.range) tags += '<div class=\'tag\'> ' + item.system.range + '</div>';
+    if (item.system.hands > 0) tags += '<div class=\'tag\'> ' + item.system.hands + ' ' +game.i18n.format('sta.item.genericitem.handed') +'</div>';
+    if (item.system.severity > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.item.genericitem.severity') + ' ' + item.system.severity +'</div>';
+    if (item.system.qualities.stun) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.stun')+'</div>';    	
+	if (item.system.qualities.deadly) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.deadly')+'</div>';
+    if (item.system.qualities.accurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.accurate')+'</div>';
+    if (item.system.qualities.area) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.area')+'</div>';
+    if (item.system.qualities.charge) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.charge')+'</div>';
+    if (item.system.qualities.cumbersome) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.cumbersome')+'</div>';
+    if (item.system.qualities.debilitating) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.debilitating')+'</div>'
+    if (item.system.qualities.grenade) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.grenade')+'</div>';
+    if (item.system.qualities.hiddenx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.hiddenx') + ' ' + item.system.qualities.hiddenx +'</div>';	
+    if (item.system.qualities.inaccurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.inaccurate')+'</div>';	
+    if (item.system.qualities.intense) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.intense')+'</div>';
+    if (item.system.qualities.piercingx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx')+'</div>';
+
+    // Send the divs to populate a HTML template and sends to chat.
+    this.genericItemTemplate(
+	item.img, 
+	item.name, 
+	item.system.description, 
+	variable, 
+	tags, 
+	)
+      .then((html)=>this.sendToChat(speaker, html));
+  }
+
+  async performStarshipWeaponRoll2e(item, speaker) {
+    // Create variable div and populate it with localisation to use in the HTML.
+    const variablePrompt = game.i18n.format('sta.roll.weapon.damage2e');
+    const variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', item.system.damage)+`</div>`;
+	
+	let tags = '';
+    if (item.system.range) tags += '<div class=\'tag\'> ' + item.system.range + '</div>';
+    if (item.system.hands > 0) tags += '<div class=\'tag\'> ' + item.system.hands + ' ' +game.i18n.format('sta.item.genericitem.handed') +'</div>';
+    if (item.system.qualities.energy) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.energy')+'</div>';    	
+	if (item.system.qualities.torpedo) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.torpedo')+'</div>';
+    if (item.system.qualities.highyield) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.highyield')+'</div>';
+    if (item.system.qualities.versatilex) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.versatilex')+'</div>';
+
+    // Send the divs to populate a HTML template and sends to chat.
+    this.genericItemTemplate(
+	item.img, 
+	item.name, 
+	item.system.description, 
+	variable, 
+	tags, 
+	)
+      .then((html)=>this.sendToChat(speaker, html));
   }
 
   async performArmorRoll(item, speaker) {
