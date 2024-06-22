@@ -225,7 +225,7 @@ export class STAStarshipSheet extends ActorSheet {
       ev.preventDefault();
       const header = ev.currentTarget;
       const type = header.dataset.type;
-      const data = duplicate(header.dataset);
+      const data = foundry.utils.duplicate(header.dataset);
       const name = `New ${type.capitalize()}`;
       const itemData = {
         name: name,

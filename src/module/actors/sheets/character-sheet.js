@@ -252,7 +252,7 @@ export class STACharacterSheet extends ActorSheet {
       ev.preventDefault();
       const header = ev.currentTarget;
       const type = header.dataset.type;
-      const data = duplicate(header.dataset);
+      const data = foundry.utils.duplicate(header.dataset);
       const name = `New ${type.capitalize()}`;
       if (type == 'armor' && armorNumber >= 1) {
         ui.notifications.info('The current actor has an equipped armor already. Adding unequipped.');
