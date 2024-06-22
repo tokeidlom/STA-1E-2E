@@ -1,7 +1,7 @@
 export class STAStarshipWeaponSheet2e extends ItemSheet {
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['sta', 'sheet', 'item', 'starshipweapon2e'],
       width: 565,
       height: 400,

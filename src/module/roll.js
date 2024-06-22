@@ -15,7 +15,7 @@ export class STARoll {
     const doubledetermination = parseInt(selectedDisciplineValue) + parseInt(selectedDisciplineValue)
 	
     // Foundry will soon make rolling async only, setting it up as such now avoids a warning. 
-    const r = await new Roll( dicePool + 'd20' ).evaluate( {async: true});
+    const r = await new Roll( dicePool + 'd20' ).evaluate( {});
     
     // Now for each dice in the dice pool we want to check what the individual result was.
     for (i = 0; i < dicePool; i++) {
@@ -129,7 +129,7 @@ export class STARoll {
   
   async performChallengeRoll(dicePool, challengeName, speaker) {
     // Foundry will soon make rolling async only, setting it up as such now avoids a warning. 
-    const rolledChallenge = await new Roll( dicePool + 'd6' ).evaluate( {async: true});
+    const rolledChallenge = await new Roll( dicePool + 'd6' ).evaluate( {});
 
     const flavor = challengeName + ' ' + game.i18n.format('sta.roll.challenge.name');
     const successes = getSuccessesChallengeRoll( rolledChallenge );
@@ -262,7 +262,7 @@ export class STARoll {
     if (item.system.qualities.piercingx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx') + ' ' + item.system.qualities.piercingx +'</div>';
     if (item.system.qualities.viciousx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.viciousx') + ' ' + item.system.qualities.viciousx +'</div>';
 
-    const damageRoll = await new Roll( calculatedDamage + 'd6' ).evaluate( {async: true});
+    const damageRoll = await new Roll( calculatedDamage + 'd6' ).evaluate( {});
     const successes = getSuccessesChallengeRoll( damageRoll );
     const effects = getEffectsFromChallengeRoll( damageRoll );
     const diceString = getDiceImageListFromChallengeRoll( damageRoll );

@@ -5,7 +5,7 @@ import {
 export class STASmallCraftSheet2e extends ActorSheet {
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['sta', 'sheet', 'actor', 'smallcraft2e'],
       width: 900,
       height: 735,
@@ -22,7 +22,7 @@ export class STASmallCraftSheet2e extends ActorSheet {
   get template() {
     let versionInfo = game.world.coreVersion;
     if ( !game.user.isGM && this.actor.limited) return 'systems/sta/templates/actors/limited-sheet.html';
-    if (!isNewerVersion(versionInfo,"0.8.-1")) return "systems/sta/templates/actors/smallcraft-sheet-legacy.html";
+    if (!foundry.utils.isNewerVersion(versionInfo,"0.8.-1")) return "systems/sta/templates/actors/smallcraft-sheet-legacy.html";
     return `systems/sta/templates/actors/smallcraft-sheet2e.html`;
   }
     
@@ -196,7 +196,7 @@ export class STASmallCraftSheet2e extends ActorSheet {
         img: game.sta.defaultImage
       };
       delete itemData.data['type'];
-      if ( isNewerVersion( versionInfo, '0.8.-1' )) {
+      if ( foundry.utils.isNewerVersion( versionInfo, '0.8.-1' )) {
         return this.actor.createEmbeddedDocuments( 'Item', [(itemData)] ); 
       } else {
         return this.actor.createOwnedItem( itemData );
@@ -212,7 +212,7 @@ export class STASmallCraftSheet2e extends ActorSheet {
       this.activeDialog = staActor.deleteConfirmDialog(
         li[0].getAttribute('data-item-value'),
         () => {
-          if ( isNewerVersion( versionInfo, '0.8.-1' )) {
+          if ( foundry.utils.isNewerVersion( versionInfo, '0.8.-1' )) {
             this.actor.deleteEmbeddedDocuments( 'Item', [li.data('itemId')] );
           } else {
             this.actor.deleteOwnedItem( li.data( 'itemId' ));
