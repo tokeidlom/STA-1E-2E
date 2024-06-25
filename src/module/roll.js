@@ -240,7 +240,7 @@ export class STARoll {
       variablePrompt = game.i18n.format('sta.roll.weapon.damage');
     }
     const variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', calculatedDamage)+`</div>`;
-    
+
     // Create dynamic tags div and populate it with localisation to use in the HTML.
     let tags = '';
     
@@ -332,6 +332,9 @@ export class STARoll {
     const variablePrompt = game.i18n.format('sta.roll.weapon.damage2e');
     const variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', item.system.damage)+`</div>`;
 	
+	let weaponrange = game.i18n.format('sta.actor.belonging.weapon.melee');
+	if (item.system.range == 'ranged') weaponrange = game.i18n.format('sta.actor.belonging.weapon.ranged');
+	
 	let tags = '';
     if (item.system.range) tags += '<div class=\'tag\'> ' + item.system.range + '</div>';
     if (item.system.hands > 0) tags += '<div class=\'tag\'> ' + item.system.hands + ' ' +game.i18n.format('sta.item.genericitem.handed') +'</div>';
@@ -364,6 +367,10 @@ export class STARoll {
     // Create variable div and populate it with localisation to use in the HTML.
     const variablePrompt = game.i18n.format('sta.roll.weapon.damage2e');
     const variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', item.system.damage)+`</div>`;
+	
+	let weaponrange = game.i18n.format('sta.actor.belonging.weapon.close');
+	if (item.system.range == 'medium') weaponrange = game.i18n.format('sta.actor.belonging.weapon.medium');
+	if (item.system.range == 'long') weaponrange = game.i18n.format('sta.actor.belonging.weapon.long');
 	
 	let tags = '';
     if (item.system.range) tags += '<div class=\'tag\'> ' + item.system.range + '</div>';
