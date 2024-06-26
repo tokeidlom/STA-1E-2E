@@ -9,10 +9,9 @@
   },
   "authors": [
     {
-      "name": "mkscho63",
-      "name": "Fabulist",
-      "name": "tokeidlom",
-      "flags": {}
+			"name": "mkscho63",
+			"discord": "FullMetalSeraph#7284",
+			"flags": {}
     }
   ],
   "esmodules": [
@@ -61,7 +60,7 @@
   },
   "primaryTokenAttribute": "stress",
   "secondaryTokenAttribute": "determination",
-  "url": "https://github.com/tokeidlom/STA-1E-2E",
-  "manifest": "https://raw.githubusercontent.com/tokeidlom/STA-1E-2E/master/src/system.json",
-  "download": "https://raw.githubusercontent.com/tokeidlom/STA-1E-2E/master/package/sta-v1.2.1.zip"
+  "url": "https://github.com/mkscho63/sta",
+  "manifest": "https://raw.githubusercontent.com/mkscho63/sta/master/src/system.json",
+  "download": "https://raw.githubusercontent.com/mkscho63/sta/v1.2.1/package/sta-v1.2.1.zip"
 }
