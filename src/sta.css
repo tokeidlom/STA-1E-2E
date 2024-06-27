@@ -298,18 +298,7 @@
           .sta.sheet.actor .main .row .column .section .stat.row .selector:hover {
             box-shadow: none;
             cursor: pointer; }
-          .sta.sheet.actor .header .row .column .check-button {
-            width: 75%;
-            height: 30px;
-            line-height: 30px;
-            margin: 5px 12.5%;
-            font-size: 14pt; }
-          .sta.sheet.actor .main .row .column .check-button {
-            width: 75%;
-            height: 30px;
-            line-height: 30px;
-            margin: 5px 12.5%;
-            font-size: 14pt; }
+          .sta.sheet.actor .main .row .column .check-button,
           .sta.sheet.actor .main .row .column .section .check-button {
             width: 75%;
             height: 30px;
