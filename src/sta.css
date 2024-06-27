@@ -314,16 +314,22 @@
             line-height: 30px;
             margin: 5px 12.5%;
             font-size: 14pt; }
+        .sta.sheet.actor .main .row .column .section.reservepower,
+        .sta.sheet.actor .main .row .column .section.shaken,
         .sta.sheet.actor .main .row .column .section.scale,
         .sta.sheet.actor .main .row .column .section.resistance {
           display: flex;
           background-color: #9944FF;
           height: 41px; }
+          .sta.sheet.actor .main .row .column .section.reservepower .title,
+          .sta.sheet.actor .main .row .column .section.shaken .title,
           .sta.sheet.actor .main .row .column .section.scale .title,
           .sta.sheet.actor .main .row .column .section.resistance .title {
             background-color: #0F0F0F;
             width: 75%;
             margin-top: 5px; }
+          .sta.sheet.actor .main .row .column .section.reservepower .checkbox,
+          .sta.sheet.actor .main .row .column .section.shaken .checkbox,
           .sta.sheet.actor .main .row .column .section.scale .field.numeric-entry,
           .sta.sheet.actor .main .row .column .section.resistance .field.numeric-entry {
             width: 15%;
@@ -332,10 +338,12 @@
             border-radius: 0px;
             margin-top: 5px;
             background-color: #0F0F0F; }
-        .sta.sheet.actor .main .row .column .section.scale .title {
+        .sta.sheet.actor .main .row .column .section.reservepower .title,
+        .sta.sheet.actor .main .row .column .section.shaken .title {
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
           margin-left: 10%; }
+        .sta.sheet.actor .main .row .column .section.scale .field.numeric-entry,
         .sta.sheet.actor .main .row .column .section.resistance .field.numeric-entry {
           border-top-right-radius: 10px;
           border-bottom-right-radius: 10px;

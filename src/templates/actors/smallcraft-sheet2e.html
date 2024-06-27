@@ -77,8 +77,8 @@
           <div class="section reservepower">
             <div class="title">
               {{localize 'sta.actor.starship.reservepower'}}:
-              <input class="" type="checkbox" name="system.reservepower" data-dtype="Boolean" {{checked system.reservepower}}>
             </div>
+              <input class="checkbox" type="checkbox" name="system.reservepower" data-dtype="Boolean" {{checked system.reservepower}}>
           <div class="track">
               <input type="hidden" id="total-power" name="system.power.value" value="{{system.power.value}}" data-dtype="Number" />
               <input type="hidden" id="max-power" name="system.power.max" value="{{system.power.max}}" data-dtype="Number" />
@@ -87,12 +87,13 @@
               </div>
             </div>
           </div>
-          <div class="section scale">
-            <div class="title">
-              {{localize 'sta.actor.starship.scale'}}:
-            </div>
-            <input class="field numeric-entry" name="system.scale" id="scale" type="number" value="{{system.scale}}" />
-          </div>
+
+        <div class="section shaken">
+           <div class="title">
+              {{localize 'sta.actor.starship.shaken'}}:
+           </div>
+              <input class="checkbox" type="checkbox" name="system.shaken" data-dtype="Boolean" {{checked system.shaken}}>
+        </div>
         </div>
         <div class="column center-column">
                     <div class="section sheilds">
@@ -128,13 +129,12 @@
           </div>
           {{/each}}
         </div>
-
-        <div class="section shaken">
-           <div class="title">
-              {{localize 'sta.actor.starship.shaken'}}:
-              <input class="" type="checkbox" name="system.shaken" data-dtype="Boolean" {{checked system.shaken}}>
-           </div>
-        </div>
+          <div class="section scale">
+            <div class="title">
+              {{localize 'sta.actor.starship.scale'}}:
+            </div>
+            <input class="field numeric-entry" name="system.scale" id="scale" type="number" value="{{system.scale}}" />
+          </div>
         <div class="section resistance">
           <div class="title">
             {{localize 'sta.actor.starship.resistance'}}:
