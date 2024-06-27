@@ -25,7 +25,7 @@ If you use the modified LCARS UI module you will need to switch to the updated o
 # v1.2.1
 - updated system to work with v12,
 - added character sheet for 2e, which removes challenge dice button and calculates stress based on the new rules,
-- added sharship sheet for 2e, which removes challenge dice button, addition of a "shaken" checkbox and converted power bar into a reserve power checkbox, added a "maximum" box under shields to manually add the correct amount of shields until we know how it is calculated,
+- added sharship sheet for 2e, which removes challenge dice button, addition of a "shaken" checkbox and converted power bar into a reserve power checkbox, updated shields calculation to 2e rules,
 - as starship for small craft,
 - added new weapon sheet with the 2e qualities and new damage rules,
 - added new starship weapons sheet with new damage rules and the qualities included in the quickstart, can use text blob as a placeholder until the weapon qualities are known,
