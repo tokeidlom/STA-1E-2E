@@ -8,9 +8,9 @@ https://github.com/mkscho63/sta
 
 This release is in place as a way to continue updating STA module for Foundry until the original is able to pick this back up.
 
-This version adds support for V12 of Foundry, it includes the LCARS UI and maintains compatibilty with Compendia module.
+This version adds support for V12 of Foundry.
 
-For 1e users, this version maintains the same functionality, it includes updates to allow V12 of Foundry to work. If you had previousy been using LCARS UI module, you can disable this as it is now included.
+For 1e users, this version maintains the same functionality, it includes updates to allow V12 of Foundry to work.
 
 For 2e users, you can change the default sheets to the 2e versions in the settings, and per character, to the 2e versions. This remove challenge dice button, and takes into account the new rules for stress calculation.
 
@@ -22,7 +22,6 @@ This system is based on the 2e quickstart guide rules at present, and will be up
 
 # v1.2.1
 - updated system to work with v12,
-- included the LCARS UI module as this module has not been updated for v12,
 - added character sheet for 2e, which removes challenge dice button and calculates stress based on the new rules,
 - added sharship sheet for 2e, which removes challenge dice button, addition of a "shaken" checkbox and converted power bar into a reserve power checkbox, added a "maximum" box under shields to manually add the correct amount of shields until we know how it is calculated,
 - as starship for small craft,

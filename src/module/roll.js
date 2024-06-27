@@ -338,7 +338,7 @@ export class STARoll {
 	if (item.system.range == 'ranged') weaponrange = game.i18n.format('sta.actor.belonging.weapon.ranged');
 	
 	let tags = '';
-    if (item.system.range) tags += '<div class=\'tag\'> ' + item.system.range + '</div>';
+    if (item.system.range) tags += '<div class=\'tag\'> ' + weaponrange + '</div>';
     if (item.system.hands > 0) tags += '<div class=\'tag\'> ' + item.system.hands + ' ' +game.i18n.format('sta.item.genericitem.handed') +'</div>';
     if (item.system.severity > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.item.genericitem.severity') + ' ' + item.system.severity +'</div>';
     if (item.system.qualities.stun) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.stun')+'</div>';    	
@@ -375,7 +375,7 @@ export class STARoll {
 	if (item.system.range == 'long') weaponrange = game.i18n.format('sta.actor.belonging.weapon.long');
 	
 	let tags = '';
-    if (item.system.range) tags += '<div class=\'tag\'> ' + item.system.range + '</div>';
+    if (item.system.range) tags += '<div class=\'tag\'> ' + weaponrange + '</div>';
     if (item.system.hands > 0) tags += '<div class=\'tag\'> ' + item.system.hands + ' ' +game.i18n.format('sta.item.genericitem.handed') +'</div>';
     if (item.system.qualities.energy) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.energy')+'</div>';    	
 	if (item.system.qualities.torpedo) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.torpedo')+'</div>';

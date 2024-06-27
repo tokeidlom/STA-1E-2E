@@ -19,7 +19,7 @@
   ],
   "socket": true,
   "styles": [
-    "sta.css","sta-lcars-ui.css"
+    "sta.css"
   ],
   "languages": [
     {
