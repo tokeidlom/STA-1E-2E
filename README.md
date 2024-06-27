@@ -20,6 +20,8 @@ Characters created in 1e will transfer over to 2e and back without any issues in
 
 This system is based on the 2e quickstart guide rules at present, and will be updated with the new rules as soon as the books are released.
 
+If you use the modified LCARS UI module you will need to switch to the updated one https://raw.githubusercontent.com/tokeidlom/STA-LCARS-UI/main/src/module.json for this to keep working.
+
 # v1.2.1
 - updated system to work with v12,
 - added character sheet for 2e, which removes challenge dice button and calculates stress based on the new rules,
