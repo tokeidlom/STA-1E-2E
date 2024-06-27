@@ -293,6 +293,8 @@
             border-collapse: collapse;
             padding: 0px;
             display: block; }
+          .sta.sheet.actor .main .row .column .section.reservepower .checkbox,
+          .sta.sheet.actor .main .row .column .section.shaken .checkbox,
           .sta.sheet.actor .main .row .column .section .stat.row .selector:hover {
             box-shadow: none;
             cursor: pointer; }
