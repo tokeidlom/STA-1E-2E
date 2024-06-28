@@ -523,22 +523,40 @@
     .sta.sheet.item .description .editor,
     .sta.sheet.item .note .editor {
       height: 90%; }
-  .sta.sheet.item.characterweapon .header-fields .row, .sta.sheet.item.starshipweapon .header-fields .row, .sta.sheet.item.characterweapon2e .header-fields .row, .sta.sheet.item.starshipweapon2e .header-fields .row {
+  .sta.sheet.item.characterweapon .header-fields .row,
+  .sta.sheet.item.starshipweapon .header-fields .row,
+  .sta.sheet.item.characterweapon2e .header-fields .row,
+  .sta.sheet.item.starshipweapon2e .header-fields .row {
     font-size: 14px; }
-    .sta.sheet.item.characterweapon .header-fields .row .column-x4, .sta.sheet.item.starshipweapon .header-fields .row .column-x4, .sta.sheet.item.characterweapon2e .header-fields .row .column-x4, .sta.sheet.item.starshipweapon2e .header-fields .row .column-x4 {
+    .sta.sheet.item.characterweapon .header-fields .row .column-x4,
+	.sta.sheet.item.starshipweapon .header-fields .row .column-x4,
+	.sta.sheet.item.characterweapon2e .header-fields .row .column-x4,
+	.sta.sheet.item.starshipweapon2e .header-fields .row .column-x4 {
       width: 25%;
       display: flex;
       text-align: left; }
-      .sta.sheet.item.characterweapon .header-fields .row .column-x4 .label, .sta.sheet.item.starshipweapon .header-fields .row .column-x4 .label, .sta.sheet.item.characterweapon2e .header-fields .row .column-x4 .label, .sta.sheet.item.starshipweapon2e .header-fields .row .column-x4 .label {
+      .sta.sheet.item.characterweapon .header-fields .row .column-x4 .label,
+	  .sta.sheet.item.starshipweapon .header-fields .row .column-x4 .label,
+	  .sta.sheet.item.characterweapon2e .header-fields .row .column-x4 .label,
+	  .sta.sheet.item.starshipweapon2e .header-fields .row .column-x4 .label {
         line-height: 26px; }
-    .sta.sheet.item.characterweapon .header-fields .row .label-top, .sta.sheet.item.starshipweapon .header-fields .row .label-top, .sta.sheet.item.characterweapon2e .header-fields .row .label-top, .sta.sheet.item.starshipweapon2e .header-fields .row .label-top {
+    .sta.sheet.item.characterweapon .header-fields .row .label-top,
+	.sta.sheet.item.starshipweapon .header-fields .row .label-top,
+	.sta.sheet.item.characterweapon2e .header-fields .row .label-top,
+	.sta.sheet.item.starshipweapon2e .header-fields .row .label-top {
       width: 25%;
       flex-direction: column;
       text-align: center; }
-      .sta.sheet.item.characterweapon .header-fields .row .label-top input, .sta.sheet.item.starshipweapon .header-fields .row .label-top input, .sta.sheet.item.characterweapon2e .header-fields .row .label-top input, .sta.sheet.item.starshipweapon2e .header-fields .row .label-top input {
+      .sta.sheet.item.characterweapon .header-fields .row .label-top input,
+	  .sta.sheet.item.starshipweapon .header-fields .row .label-top input,
+	  .sta.sheet.item.characterweapon2e .header-fields .row .label-top input,
+	  .sta.sheet.item.starshipweapon2e .header-fields .row .label-top input {
         margin-left: auto;
         margin-right: auto; }
-  .sta.sheet.item.characterweapon .description, .sta.sheet.item.starshipweapon .description, .sta.sheet.item.characterweapon2e .description, .sta.sheet.item.starshipweapon2e .description {
+  .sta.sheet.item.characterweapon .description,
+  .sta.sheet.item.starshipweapon .description,
+  .sta.sheet.item.characterweapon2e .description,
+  .sta.sheet.item.starshipweapon2e .description {
     height: calc(100% - 128px); }
 
 /*#endregion*/
