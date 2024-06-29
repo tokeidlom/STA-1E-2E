@@ -18,7 +18,7 @@ Characters created in 1e will transfer over to 2e and back without any issues in
 
 # v1.2.1
 - Updated to replace all V12 deprecated functions and syntax, should now be fully compliant.
-- Small craft item drop-down menu improved, name appears as blank in opening sheet (TBD), but drop-down now working and updating.
+- Small craft item drop-down menu improved, name appears as blank on opening sheet (TBD), but drop-down now working and updating.
 - Starship weapons "with scale" function now working.
 - Added new actor and weapons sheets for 2e based on quick start rules & Modiphius forum posts.
 - Maintains 1e functionality, no substantive or stylistic changes to 1e beyond updating for V12.
